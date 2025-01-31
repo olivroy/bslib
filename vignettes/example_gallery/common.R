@@ -9,7 +9,7 @@ library(leaflet)
 # ************************************************
 
 # Creates the "filter link" between the controls and plots
-dat <- SharedData$new(dplyr::sample_n(diamonds, 1000))
+dat <- SharedData$new(dplyr::slice_sample(diamonds, n = 1000))
 
 # Sidebar elements (e.g., filter controls)
 filters <- list(
